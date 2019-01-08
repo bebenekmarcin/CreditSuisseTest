@@ -1,5 +1,12 @@
 ﻿namespace CreditSuisse
 {
+    /// <summary>
+    /// This is just simple implementation which meets requirements. If this would be part of production system then
+    /// eg. some logging should be added. I decided to return false if operation fail instead of exception notification
+    /// because I was not sure if class should inform why it fail or not. In production system probably exception
+    /// notification would work better and higher layer will take care about deciding what information will share
+    /// externally. In production system also we need to ensure about integration test if all components works together. 
+    /// </summary>
     public class CashCardService : ICashCardService
     {
         private readonly IPinService _pinService;
